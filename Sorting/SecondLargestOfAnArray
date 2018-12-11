@@ -1,0 +1,39 @@
+public class SecondLargest{	
+	
+	public static int secondLargestElement(int[] arr) {
+		/* Your class should be named SecondLargest
+		 * Don't write main().
+		 * Don't read input, it is passed as function argument.
+		 * Return output and don't print it.
+	 	 * Taking input and printing output is handled automatically.
+  		 */
+ int i, first, second; 
+       int arr_size=arr.length;
+      
+        if (arr_size <=1) 
+        { 
+            
+            return -2147483648 ; 
+        } 
+       
+        first = second = Integer.MIN_VALUE; 
+        for (i = 0; i < arr_size ; i++) 
+        { 
+           
+            if (arr[i] > first) 
+            { 
+                second = first; 
+                first = arr[i]; 
+            } 
+       
+            
+            else if (arr[i] > second && arr[i] != first) 
+                second = arr[i]; 
+        } 
+          
+        if (second == Integer.MIN_VALUE) 
+             return -2147483648;
+        else
+            return second;
+	}
+}

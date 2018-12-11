@@ -1,0 +1,29 @@
+public class BinarySearch{	
+	//arr is the given sorted array in which you need to find num
+	public static int binarySearch(int[] arr, int num){
+      int search=num;
+  int n=arr.length;
+  int first  = 0;
+  int  last   = n - 1;
+  int  middle = (first + last)/2;
+ 
+    while( first <= last )
+    {
+      if ( arr[middle] < search )
+        first = middle + 1;    
+      else if ( arr[middle] == search )
+      {
+        return middle;
+        
+      }
+      else
+         last = middle - 1;
+ 
+      middle = (first + last)/2;
+   }
+   if (first > last)
+      return -1;
+      return -1;
+  }
+}	
+	

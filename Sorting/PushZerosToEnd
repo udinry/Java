@@ -1,0 +1,31 @@
+public static void pushZerosAtEnd(int[] arr){
+		/* Your class should be named PushZerosAtEnd 
+		 * Don't write main().
+	         * Don't read input, it is passed as function argument.
+     		 * No need to return or print the output.
+     		 * Taking input and printing output is handled automatically.
+     		 */
+
+      int i=0;
+      int k=0;
+      while(i<arr.length)
+      {
+        if(arr[i]==0)
+        {
+          i++;
+        }
+        else
+        {
+          arr[k]=arr[i];
+          k++;
+          i++;
+        }
+      }
+      while(k<arr.length)
+      {
+        arr[k]=0;
+        k++;
+      }
+        
+	}
+}

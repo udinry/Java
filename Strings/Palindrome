@@ -1,0 +1,24 @@
+public class Solution {
+
+	public static boolean checkPalindrome(String str){
+		/* Your class should be named Solution
+		* Don't write main().
+		* Don't read input, it is passed as function argument.
+		* Return output and don't print it.
+		* Taking input and printing output is handled automatically.
+		*/
+      int j=0;
+String lal="";
+      char c;
+      for(int i=str.length()-1;i>=0;i--)
+      {
+      lal=lal+str.charAt(i);
+      }
+      boolean b=false;
+      if(str.compareTo(lal)==0)
+      {
+        b=true;
+      }
+      return b;
+	}
+}

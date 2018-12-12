@@ -6,11 +6,13 @@ class GFG {
 	public static void main (String[] args) {
 		char c='c';
 		String str ="abcdefgh";
-		System.out.println(str.charAt(1));
-		System.out.println(str.length());
-		System.out.println(str.substring(1,6));
-		System.out.println(str.substring(3));
-		System.out.println(str.contains("cde"));
+		System.out.println(str.charAt(1)); //b
+		System.out.println(str.length());  //8
+		System.out.println(str.substring(1,6));  //bcde
+		System.out.println(str.substring(3));   //defgh
+		System.out.println(str.contains("cde"));  // true
+System.out.println(str.contains("cdg")); //false
+str=str+def; //concatenate karne ke liye strings ko!
 		
 	}
 }

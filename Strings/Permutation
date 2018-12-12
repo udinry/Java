@@ -1,0 +1,31 @@
+import java.util.*;
+public class solution {
+
+	public static boolean isPermutation(String input1, String input2) {
+	    // Write your code here
+
+      
+     int n1 = input1.length();  
+    int n2 = input2.length();  
+  
+    // If length of both strings is not same,  
+    // then they cannot be Permutation  
+    if (n1 != n2)  
+    return false;  
+    char ch1[] = input1.toCharArray(); 
+    char ch2[] = input2.toCharArray(); 
+  
+    // Sort both strings  
+    Arrays.sort(ch1);  
+    Arrays.sort(ch2);  
+  
+    // Compare sorted strings  
+    for (int i = 0; i < n1; i++)  
+    if (ch1[i] != ch2[i])  
+        return false;  
+  
+    return true;  
+ 
+      
+	}
+}

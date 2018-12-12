@@ -1,0 +1,7 @@
+public class solution {
+
+	public static String removeConsecutiveDuplicates(String input) {
+	    // Write your code here
+return(input.replaceAll("(.)\\1{1,}", "$1"));
+	}
+}

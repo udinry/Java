@@ -1,0 +1,28 @@
+// highest occurring character in the String.
+public class solution {
+
+	public static char highestOccuringCharacter(String inputString) {
+		// Write your code here
+int most=0;
+      int count =0;
+      int ila=0;
+      for(int i=0;i<inputString.length();i++)
+      {
+        count=0;
+        for(int j=0;j<inputString.length();j++)
+        {
+          if(inputString.charAt(i)==inputString.charAt(j))
+             {
+               count++;
+             }
+             if(count>most)
+             {
+               most=count;
+               ila=i;
+             }
+        }
+            
+      }
+       return inputString.charAt(ila);
+	}
+}

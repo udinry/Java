@@ -1,0 +1,31 @@
+public class Solution {
+
+	public static String compress(String inputString) {
+ if (inputString.isEmpty()) {
+        return "";
+    }
+
+    char[] chars = inputString.toCharArray();
+    StringBuilder builder = new StringBuilder();
+
+    int count = 1;
+    char prev = chars[0];
+    for (int i = 1; i < chars.length; i++) {
+        char current = chars[i];
+        if (current == prev) {
+            count++;
+        } else if(count>1) {
+            builder.append(prev).append(count);
+            count = 1;
+        }
+      else
+      {
+        builder.append(prev);
+        
+      }
+        prev = current;
+    }
+    return builder.append(prev).toString();
+    }
+
+}

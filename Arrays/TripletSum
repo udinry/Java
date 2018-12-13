@@ -1,0 +1,37 @@
+import java.util.Arrays;
+public class Solution{	
+	
+	public static void pairSum(int[] input, int x){
+		/* Your class should be named Solution 
+		 * Don't write main(). 
+		 * Don't read input, it is passed as function argument. 
+		 * Print output and don't return it. 
+		 * Taking input is handled automatically. 
+		 */
+     if(input.length<=1000 && x<=100 && 1<=input.length && 1<=x)
+      {
+		Arrays.sort(input);
+      for(int i=0;i<input.length;i++)
+      {
+        for(int j=i+1;j<input.length;j++)
+        {
+          
+          if(input[i]+input[j]==x)
+          {
+            if(input[j]<input[i])
+            {
+              break;
+            }
+            else
+            {
+            System.out.println(input[i]+" "+input[j]);
+            }
+            }
+        }
+        
+      }
+      }
+ 
+      
+	}
+}
